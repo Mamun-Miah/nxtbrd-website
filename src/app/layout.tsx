@@ -11,7 +11,7 @@ const anton = Anton({
 });
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // choose weights
+  weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
 });
 
@@ -29,6 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${anton.variable} ${poppins.variable} antialiased text-[#FFFFFF]`}
+        style={{ fontFamily: "Poppins" }}
       >
         <Header />
         {children}

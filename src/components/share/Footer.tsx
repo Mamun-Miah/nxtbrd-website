@@ -9,94 +9,117 @@ import { RiFileSettingsFill } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <div className="h-[496px] px-[198px] py-10">
-      <div className="flex justify-between gap-[80px]">
-        <div className="w-[35%]">
-          <Image src="/logo.png" width={289} height={54} alt="logo" />
-          <p className="text-[#E8E8E8] text-[22px] my-5">
-            By crafting impactful digital experiences through strategy,
-            creativity, and innovation that connect with audiences and drive
-            long-term success.
-          </p>
-          <div className="flex gap-2">
-            <Link
-              className="text-primary bg-[#222222] w-[60px] h-[60px]  inline-flex items-center justify-center rounded-[10px]"
-              href=""
-            >
-              <Image
-                src="/icons/home/twitter.svg"
-                width={36}
-                height={30}
-                alt="twitter icon"
-              />
-            </Link>
-            <Link
-              className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
-              href=""
-            >
-              <Image
-                src="/icons/home/instagram.svg"
-                width={30}
-                height={30}
-                alt="instagram icon"
-              />
-            </Link>
-            <Link
-              className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
-              href=""
-            >
-              <Image
-                src="/icons/home/facebook.svg"
-                width={16}
-                height={30}
-                alt="facebook icon"
-              />
-            </Link>
-            <Link
-              className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
-              href=""
-            >
-              <Image
-                src="/icons/home/linkedin.svg"
-                width={31}
-                height={31}
-                alt="facebook icon"
-              />
-            </Link>
+    <div className="lg:h-[496px] lg:px-[90px] px-[42px] py-10 bg-[#222222]">
+      <div className="flex flex-col lg:flex-row justify-between lg:gap-[80px] gap-[42px] w-full">
+        <div className="flex flex-col lg:flex-row justify-between lg:gap-[80px] gap-[42px] lg:w-1/2">
+          <div className="md:w-1/2">
+            <Image src="/logo.png" width={289} height={54} alt="logo" />
+            <p className="text-[#E8E8E8] text-[22px] my-5">
+              By crafting impactful digital experiences through strategy,
+              creativity, and innovation that connect with audiences and drive
+              long-term success.
+            </p>
+            <div className="flex gap-2">
+              <Link
+                className="text-primary bg-[#222222] w-[60px] h-[60px]  inline-flex items-center justify-center rounded-[10px]"
+                href=""
+              >
+                <Image
+                  src="/icons/home/twitter.svg"
+                  width={36}
+                  height={30}
+                  alt="twitter icon"
+                />
+              </Link>
+              <Link
+                className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
+                href=""
+              >
+                <Image
+                  src="/icons/home/instagram.svg"
+                  width={30}
+                  height={30}
+                  alt="instagram icon"
+                />
+              </Link>
+              <Link
+                className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
+                href=""
+              >
+                <Image
+                  src="/icons/home/facebook.svg"
+                  width={16}
+                  height={30}
+                  alt="facebook icon"
+                />
+              </Link>
+              <Link
+                className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
+                href=""
+              >
+                <Image
+                  src="/icons/home/linkedin.svg"
+                  width={31}
+                  height={31}
+                  alt="facebook icon"
+                />
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="flex justify-between gap-[80px] w-[65%]">
-          <div className="w-3/12">
+          <div className="md:w-1/2">
             <h3 className="text-[22px] border-b-2  border-[#FFD300] inline-block">
               Quick Links
             </h3>
             <ul className="mt-6 flex flex-col gap-4">
               <li>
                 <Link className="flex items-center gap-2" href="/">
-                  <IoHomeSharp className="text-primary" />
+                  <Image
+                    src="/icons/home/home.svg"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />{" "}
                   Home
                 </Link>
               </li>
               <li>
                 <Link className="flex items-center gap-2" href="/services">
-                  <IoMdSettings className="text-primary" /> Services
+                  <Image
+                    src="/icons/home/services.svg"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />{" "}
+                  Home
                 </Link>
               </li>
               <li>
                 <Link className="flex items-center gap-2" href="/about">
-                  <IoIosInformationCircleOutline className="text-primary" />
+                  <Image
+                    src="/icons/home/about.svg"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />{" "}
                   About
                 </Link>
               </li>
               <li>
                 <Link className="flex items-center gap-2" href="/team">
-                  <MdOutlineSupportAgent className="text-primary" />
+                  <Image
+                    src="/icons/home/persons.svg"
+                    height={20}
+                    width={20}
+                    alt=""
+                  />{" "}
                   Team
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="w-5/12">
+        </div>
+        <div className="flex flex-col lg:flex-row justify-between lg:gap-[80px] gap-[42px] lg:w-1/2">
+          <div className="md:1/2">
             <h3 className="text-[22px] border-b-2  border-[#FFD300] inline-block">
               Company Info
             </h3>
@@ -129,7 +152,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-4/12">
+          <div className="md:w-1/2">
             <h3 className="text-[22px] border-b-2  border-[#FFD300] inline-block">
               Opening Hours
             </h3>

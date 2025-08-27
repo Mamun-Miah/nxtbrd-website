@@ -52,9 +52,9 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
   --primary: #fcc304;
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --primary-foreground: #ffd300;
+  --secondary: #222222;
+  --secondary-foreground: #bfbfbf;
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0.968 0.007 247.896);
@@ -119,4 +119,16 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+p {
+  --color: var(--secondary-foreground);
+}
+.btn-primary {
+  background-color: var(--primary-foreground);
+  font-family: "Anton";
+  color: #050505;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: small;
 }
