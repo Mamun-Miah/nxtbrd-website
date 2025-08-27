@@ -38,7 +38,7 @@ const steps = [
 ];
 export default function WorkProcess() {
   return (
-    <div className="w-[80%] mx-auto">
+    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
       <SectionTitleSm title="Work process" />
       <h3 className="text-3xl font-['anton']">
         Our streamlined 6 step
@@ -50,7 +50,7 @@ export default function WorkProcess() {
         <span className="text-primary"> strategy into success</span>
       </h3>
 
-      <div className="grid grid-cols-2 gap-20 mt-10">
+      <div className="grid grid-cols-2 gap-10 mt-10">
         {steps.map((step, index) => (
           <motion.div
             key={index}

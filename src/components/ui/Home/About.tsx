@@ -5,19 +5,20 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="lg:px-[180px] px-[42px] py-10">
+    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
       <div className="flex md:flex-row flex-col-reverse items-center gap-10">
-        <div className="md:w-2/5 md:border-r-1 border-secondary-foreground">
+        <div className="relative md:w-4/12">
           <div className="hidden md:block">
             <SectionTitleSm title="Who we are" />
           </div>
           <Image src="/home/ring.png" width={200} height={200} alt="" />{" "}
+          <span className="absolute top-[10%] left-[80%] block w-[1px] h-48 bg-gray-600"></span>
         </div>
-        <div className="md:w-3/5">
+        <div className="md:w-6/12">
           <div className="md:hidden  block pb-5">
             <SectionTitleSm title="Who we are" />
           </div>
-          <h2 className="text-3xl font-['anton'] leading-10 tracking-wide">
+          <h2 className="text-3xl font-['anton'] leading-12 tracking-wider">
             NXT BRD IS A{" "}
             <span className="text-primary">
               DYNAMIC DIGITAL MARKETING AGENCY
@@ -26,12 +27,12 @@ const About = () => {
             <Image
               src="/icons/home/curved-arrow.svg"
               className="inline ml-3"
-              height={20}
-              width={25}
+              height={30}
+              width={30}
               alt=""
             />
           </h2>
-          <p className="text-secondary-foreground mt-5">
+          <p className="text-lg text-secondary-foreground mt-5">
             We offer a full range of services including Social Media Management,
             SEO, Content Writing, Graphic Design, Branding, Video Editing,
             Landing Page Design, App Design, and Software Design.

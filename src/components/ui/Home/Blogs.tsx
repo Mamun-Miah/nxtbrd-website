@@ -4,12 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+
 // import required modules
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
-import "./Blogs.css";
+
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 

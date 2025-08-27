@@ -6,10 +6,10 @@ import { AiOutlinePlus } from "react-icons/ai";
 const Banner = () => {
   return (
     <div className="lg:w-[80%] w-[90%] mx-auto py-10">
-      <div className="flex md:flex-row flex-col items-center justify-between gap-10">
+      <div className="flex md:flex-row flex-col items-center justify-between gap-20">
         <div className="md:w-1/2">
           <div className="">
-            <h1 className="lg:text-6xl md:text-5xl text-3xl font-['Anton'] text-primary md:leading-16 leading-9 tracking-wider">
+            <h1 className="lg:text-7xl md:text-5xl text-3xl font-['Anton'] text-primary  leading-tight tracking-wider">
               WE BUILD{" "}
               <span className="inline-flex items-center">
                 <Image
@@ -35,12 +35,12 @@ const Banner = () => {
               </span>
               <br /> BRAND{" "}
               <span
-                style={{ WebkitTextStroke: "0.3px rgb(190 190 190)" }}
+                style={{ WebkitTextStroke: "0.7px rgb(190 190 190)" }}
                 className="text-[#222222]"
               >
                 PEOPLE <br /> REMEMBER
                 <Image
-                  className="inline lg:ml-3 ml-2 lg:w-[60px] w-[40px]"
+                  className="inline lg:ml-3 ml-2 lg:w-[80px] w-[40px]"
                   src="/icons/home/tv.svg"
                   height={60}
                   width={60}
@@ -48,20 +48,20 @@ const Banner = () => {
                 />
               </span>
             </h1>
-            <p className="mt-5 text-[#BFBFBF]">
+            <p className="mt-2 text-[#BFBFBF] leading-relaxed">
               By crafting impactful digital experiences through strategy,
               creativity, and innovation that connect with audiences and drive
               long-term success.
             </p>
-            <button className="mt-5 py-2 px-10 rounded-lg text-white border-2 border-white font-['Anton']">
+            <button className="text-sm mt-5 py-3 px-12 border-1 rounded-lg text-white font-['Anton'] tracking-wider transition-all duration-200 hover:bg-primary hover:text-black hover:border-black cursor-pointer">
               Get a Free Consultation
             </button>
           </div>
         </div>
-        <div className="md:w-1/2 pb-10 px-8">
+        <div className="md:w-1/2">
           <div className="relative">
             <div className="absolute bottom-[85%] right-[87%]">
-              <h3 className="text-2xl text-primary font-anton font-bold">
+              <h3 className="text-2xl text-primary font-['anton'] font-bold tracking-wider">
                 {" "}
                 200K
               </h3>

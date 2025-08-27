@@ -29,7 +29,7 @@ const Team = () => {
   const next = () => setActive((i) => (i + 1) % n);
 
   // card width + spacing
-  const offset = 360; // px for slide distance
+  const offset = 400; // px for slide distance
 
   const styleFor = (i: number) => {
     const diff = (i - active + n) % n;
@@ -74,13 +74,13 @@ const Team = () => {
   };
 
   return (
-    <div className="lg:px-[198px] px-[45px]">
+    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
       <SectionTitle
         heading="Meet Our"
         headingSpan="Team"
         paragraph="A creative, skilled, and passionate team delivering tailored digital marketing solutions to help brands grow, connect, and succeed online."
       />
-      <div className="relative mx-auto w-full max-w-5xl py-12">
+      <div className="relative mx-auto w-full">
         <div className="relative mx-auto flex items-center justify-center gap-10 h-[500px] overflow-hidden">
           {teamMembers.map((m, i) => {
             const diff = (i - active + n) % n;
@@ -92,7 +92,7 @@ const Team = () => {
                 style={{ ...styles }}
                 className="absolute transition-all duration-500 ease-in-out rounded-3xl overflow-hidden"
               >
-                <Image src={m.img} alt={m.img} width={300} height={300} />
+                <Image src={m.img} alt={m.img} width={320} height={300} />
                 {isActive && (
                   <div className="w-[260px] bg-neutral-900 text-center py-3 z-100 relative top-[-45px] left-[18px] rounded-lg">
                     <h3 className="text-white font-bold">{m.name}</h3>

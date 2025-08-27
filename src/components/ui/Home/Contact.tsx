@@ -3,7 +3,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-[80%] mx-auto py-10">
+    <div className="w-[80%] mx-auto py-20">
       <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
         <div className="w-full">
           <h1 className="lg:text-7xl md:text-6xl text-5xl font-['anton'] tracking-wider leading-20">

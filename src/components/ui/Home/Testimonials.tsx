@@ -37,7 +37,7 @@ const items = [
 ];
 const Testimonials = () => {
   return (
-    <div className="w-[80%] mx-auto pb-20">
+    <div className="w-[80%] mx-auto pb-10">
       <SectionTitleSm title="Our happy Clients" />
 
       <h3 className="text-3xl font-['anton']">
