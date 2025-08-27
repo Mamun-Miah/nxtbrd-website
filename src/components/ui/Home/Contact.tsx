@@ -11,7 +11,7 @@ const Contact = () => {
             <br />
             FOR YOUR <br /> SUCCESS{" "}
             <Image
-              className="relative left-[53%] bottom-10"
+              className="relative left-[53%] bottom-34"
               src="/icons/home/marketing-automation.svg"
               width={160}
               height={160}
