@@ -61,6 +61,7 @@ const services = [
     image: "/home/services/service5.png",
   },
   {
+    id: 8,
     title: "Search Engine Optimization",
     description:
       "Boost your visibility and rank higher on search engines to attract more organic traffic.",

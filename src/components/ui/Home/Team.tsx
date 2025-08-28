@@ -29,9 +29,9 @@ const Team = () => {
   const next = () => setActive((i) => (i + 1) % n);
 
   // card width + spacing
-  const offset = 400; // px for slide distance
+  const offset = 400;
 
-  const styleFor = (i: number) => {
+  const styleFor = (i: number): React.CSSProperties => {
     const diff = (i - active + n) % n;
 
     // Active in center
@@ -94,9 +94,11 @@ const Team = () => {
               >
                 <Image src={m.img} alt={m.img} width={320} height={300} />
                 {isActive && (
-                  <div className="w-[260px] bg-neutral-900 text-center py-3 z-100 relative top-[-45px] left-[18px] rounded-lg">
-                    <h3 className="text-white font-bold">{m.name}</h3>
-                    <p className="text-yellow-400 text-sm">{m.role}</p>
+                  <div className="w-[260px] bg-[#373737] text-center py-3 z-100 relative top-[-45px] left-[18px] rounded-lg">
+                    <h3 className="text-lg text-white font-extralight font-['anton'] uppercase tracking-wider">
+                      {m.name}
+                    </h3>
+                    <p className="text-yellow-400 text-sm">({m.role})</p>
                   </div>
                 )}
               </div>

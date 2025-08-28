@@ -20,7 +20,7 @@ const Header = () => {
         ></Image>
       </div>
       <div className="flex items-center gap-8">
-        <ul className="lg:flex hidden items-center gap-10 font-anton">
+        <ul className="lg:flex hidden items-center gap-10 font-['anton'] text-sm tracking-wider text-gray-200">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -32,6 +32,9 @@ const Header = () => {
           </li>
           <li>
             <Link href="/team">Team</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
         <button onClick={() => setIsOpen(true)} className="text-2xl">

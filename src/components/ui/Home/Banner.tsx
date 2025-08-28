@@ -6,27 +6,29 @@ import { AiOutlinePlus } from "react-icons/ai";
 const Banner = () => {
   return (
     <div className="lg:w-[80%] w-[90%] mx-auto py-10">
-      <div className="flex md:flex-row flex-col items-center justify-between gap-20">
+      <div className="flex md:flex-row flex-col items-center justify-between gap-16">
+        {/* left side */}
         <div className="md:w-1/2">
           <div className="">
-            <h1 className="lg:text-7xl md:text-5xl text-3xl font-['Anton'] text-primary  leading-tight tracking-wider">
+            <h1 className="lg:text-7xl md:text-5xl text-4xl font-['Anton'] text-primary  leading-tight tracking-wider">
               WE BUILD{" "}
               <span className="inline-flex items-center">
                 <Image
                   src="/icons/home/brand-person1.svg"
+                  className="lg:w-13 md:w-10 w-8"
                   width={50}
                   height={50}
                   alt="brand person1"
                 />
                 <Image
-                  className="ml-[-20px]"
+                  className="md:ml-[-20px] -ml-3 lg:w-13 md:w-10 w-8"
                   src="/icons/home/brand-person2.svg"
                   width={50}
                   height={50}
                   alt="brand person1"
                 />
                 <Image
-                  className="ml-[-20px]"
+                  className="md:ml-[-20px] -ml-3 lg:w-13 md:w-10 w-8"
                   src="/icons/home/brand-person3.svg"
                   width={50}
                   height={50}
@@ -40,7 +42,7 @@ const Banner = () => {
               >
                 PEOPLE <br /> REMEMBER
                 <Image
-                  className="inline lg:ml-3 ml-2 lg:w-[80px] w-[40px]"
+                  className="inline lg:ml-3 ml-2 lg:w-[80px] w-[30px]"
                   src="/icons/home/tv.svg"
                   height={60}
                   width={60}
@@ -53,12 +55,14 @@ const Banner = () => {
               creativity, and innovation that connect with audiences and drive
               long-term success.
             </p>
-            <button className="text-sm mt-5 py-3 px-12 border-1 rounded-lg text-white font-['Anton'] tracking-wider transition-all duration-200 hover:bg-primary hover:text-black hover:border-black cursor-pointer">
+            <button className="hidden md:block text-sm mt-5 py-3 px-12 border-1 rounded-lg text-white font-['Anton'] tracking-wider transition-all duration-200 hover:bg-primary hover:text-black hover:border-black cursor-pointer">
               Get a Free Consultation
             </button>
           </div>
         </div>
-        <div className="md:w-1/2">
+
+        {/* right side */}
+        <div className="md:w-1/2 md:pl-0 pl-10">
           <div className="relative">
             <div className="absolute bottom-[85%] right-[87%]">
               <h3 className="text-2xl text-primary font-['anton'] font-bold tracking-wider">
@@ -76,8 +80,9 @@ const Banner = () => {
               src="/home/banner-img.png"
               alt=""
             />
+
             {/* ratings */}
-            <div className="absolute bottom-[-8px] left-[-40px] bg-[#222222] p-3 w-54 rounded-lg">
+            <div className="absolute md:bottom-[-8px] bottom-[-35px] md:left-[-40px] left-[-70px] bg-[#222222] p-3 w-54 rounded-lg md:scale-100 scale-75">
               <div className="flex gap-3">
                 <p className="text-[#F1F1F1] text-xs">Rating 5.0</p>
                 <span className="flex gap-1">
@@ -147,6 +152,7 @@ const Banner = () => {
                 </button>
               </div>
             </div>
+
             {/* social links */}
             <div className="flex gap-1 absolute bottom-0 left-[66%]">
               <Link
@@ -196,6 +202,9 @@ const Banner = () => {
               </Link>
             </div>
           </div>
+          <button className="block md:hidden text-sm mt-10 py-3 px-12 rounded-lg font-['Anton'] tracking-wider transition-all duration-200 bg-primary hover:bg-primary-foreground text-black cursor-pointer w-full">
+            Get a Free Consultation
+          </button>
         </div>
       </div>
     </div>

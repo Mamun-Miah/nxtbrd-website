@@ -124,11 +124,6 @@ p {
   --color: var(--secondary-foreground);
 }
 .btn-primary {
-  background-color: var(--primary-foreground);
-  font-family: "Anton";
-  color: #050505;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-  font-size: small;
+  @apply bg-primary-foreground font-['Anton'] text-[#050505] 
+           rounded-md p-2 cursor-pointer text-sm;
 }

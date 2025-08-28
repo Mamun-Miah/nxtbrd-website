@@ -50,7 +50,7 @@ export default function WorkProcess() {
         <span className="text-primary"> strategy into success</span>
       </h3>
 
-      <div className="grid grid-cols-2 gap-10 mt-10">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-10">
         {steps.map((step, index) => (
           <motion.div
             key={index}
