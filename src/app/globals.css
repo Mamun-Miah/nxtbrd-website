@@ -127,3 +127,30 @@ p {
   @apply bg-primary-foreground font-['Anton'] text-[#050505] 
            rounded-md p-2 cursor-pointer text-sm;
 }
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient-move {
+  z-index: 0;
+  animation: gradient-move 5s ease-in infinite;
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

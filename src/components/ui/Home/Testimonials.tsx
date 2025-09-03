@@ -70,7 +70,7 @@ const Testimonials = () => {
       </h3>
 
       <Carousel
-        className="w-[90%] mx-auto mt-10"
+        className="lg:w-[90%] mx-auto mt-10 w-full"
         setApi={(embla: any) => {
           embla.on("select", () => {
             setActiveIndex(embla.selectedScrollSnap());
@@ -85,7 +85,7 @@ const Testimonials = () => {
             >
               <div
                 className={`relative bg-[url('/home/review-bg.png')] bg-center bg-contain bg-no-repeat h-[300px] ${
-                  activeIndex === index - 1 && "-top-10"
+                  activeIndex === index - 1 && "lg:-top-10"
                 }`}
               >
                 <div className="pt-5 w-[300px] p-1">

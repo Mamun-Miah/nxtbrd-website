@@ -1,16 +1,19 @@
-import { MapPinHouse } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { MdEmail, MdWifiCalling3 } from "react-icons/md";
-import { RiFileSettingsFill } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <div className="py-20 bg-[#222222]">
-      <div className="lg:w-[80%] mx-auto flex flex-col lg:flex-row justify-between lg:gap-[80px] gap-[42px] w-full">
+    <div className="py-10 bg-[#222222]">
+      <div className="lg:w-[80%] w-[90%] mx-auto flex flex-col lg:flex-row justify-between lg:gap-[80px] gap-[42px]">
         <div className="flex flex-col lg:flex-row justify-between lg:gap-[80px] gap-[42px] lg:w-1/2">
           <div className="md:w-2/3">
-            <Image src="/logo.png" width={289} height={54} alt="logo" />
+            <Image
+              className="lg:w-[238px] w-[160px]"
+              src="/logo.png"
+              width={238}
+              height={54}
+              alt="logo"
+            />
             <p className="text-[#E8E8E8]  my-5">
               By crafting impactful digital experiences through strategy,
               creativity, and innovation that connect with audiences and drive
@@ -18,7 +21,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-2">
               <Link
-                className="text-primary bg-[#222222] w-[60px] h-[60px]  inline-flex items-center justify-center rounded-[10px]"
+                className="text-primary bg-[#454444] w-[60px] h-[60px]  inline-flex items-center justify-center rounded-[10px]"
                 href=""
               >
                 <Image
@@ -29,7 +32,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
+                className="text-primary bg-[#454444] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
                 href=""
               >
                 <Image
@@ -40,7 +43,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
+                className="text-primary bg-[#454444] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
                 href=""
               >
                 <Image
@@ -51,7 +54,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
-                className="text-primary bg-[#222222] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
+                className="text-primary bg-[#454444] w-[60px] h-[60px] inline-flex items-center justify-center rounded-[10px]"
                 href=""
               >
                 <Image

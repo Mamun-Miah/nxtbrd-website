@@ -1,22 +1,23 @@
-import Image from "next/image";
 import React from "react";
 
 const Contact = () => {
   return (
-    <div className="w-[80%] mx-auto py-20">
+    <div className="w-[80%] mx-auto py-10">
       <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
         <div className="w-full">
-          <h1 className="lg:text-7xl md:text-6xl text-5xl font-['anton'] tracking-wider leading-20">
+          <h1 className="relative lg:text-7xl text-5xl font-['anton'] tracking-wider lg:leading-20 leading-16 after:content-[''] after:absolute after:right-[25%] after:bottom-0 after:w-30 after:h-30 after:bg-[url('/icons/home/marketing-automation.svg')] after:bg-contain after:bg-no-repeat after:after">
             <span className="text-primary-foreground"> ARE YOU READY </span>{" "}
             <br />
             FOR YOUR <br /> SUCCESS{" "}
-            <Image
-              className="relative left-[53%] bottom-34"
-              src="/icons/home/marketing-automation.svg"
-              width={160}
-              height={160}
-              alt=""
-            />
+            {/* <span className="relative inline">
+              <Image
+                className="absolute left-[53%] top-[40%] md:w-[160px] w-[120px]"
+                src="/icons/home/marketing-automation.svg"
+                width={160}
+                height={160}
+                alt=""
+              />
+            </span> */}
           </h1>
         </div>
         <div className="w-full bg-[#303030] p-7 rounded-xl">

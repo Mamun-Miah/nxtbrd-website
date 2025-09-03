@@ -5,11 +5,11 @@ import { AiOutlinePlus } from "react-icons/ai";
 
 const Banner = () => {
   return (
-    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
+    <div className="h-screen lg:w-[80%] w-[90%] mx-auto py-10 flex items-center justify-center">
       <div className="flex md:flex-row flex-col items-center justify-between gap-16">
         {/* left side */}
         <div className="md:w-1/2">
-          <div className="">
+          <div className="z-100">
             <h1 className="lg:text-7xl md:text-5xl text-4xl font-['Anton'] text-primary  leading-tight tracking-wider">
               WE BUILD{" "}
               <span className="inline-flex items-center">

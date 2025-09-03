@@ -1,8 +1,8 @@
 "use client";
 import SectionTitleSm from "@/components/share/SectionTitleSm";
-import { BiSolidRightArrow } from "react-icons/bi";
 import Image from "next/image";
 import { motion } from "motion/react";
+import styles from "./Home.module.css";
 
 const steps = [
   {
@@ -45,12 +45,11 @@ export default function WorkProcess() {
         <span className="inline-flex ml-2">
           <Image src="/home/rectangle2.png" width={150} height={40} alt="" />
         </span>
-        <br />
-        process turns
+        <br className="hidden md:block" /> process turns
         <span className="text-primary"> strategy into success</span>
       </h3>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-10">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-x-20 gap-y-10 mt-10">
         {steps.map((step, index) => (
           <motion.div
             key={index}
@@ -60,7 +59,7 @@ export default function WorkProcess() {
             viewport={{ once: true, amount: 0.3 }}
             className="relative flex items-center w-full"
           >
-            <div className=" bg-[#303030] rounded-full min-w-[80px] h-[80px] flex items-center justify-center mr-[-10px]">
+            <div className=" bg-[#303030] rounded-full min-w-[80px] h-[80px] flex items-center justify-center mr-[-10px] z-10">
               <Image
                 className="max-w-full"
                 src={step.img}
@@ -69,20 +68,18 @@ export default function WorkProcess() {
                 height={40}
               />
             </div>
-            <div className="relative w-full min-h-[120px]">
-              <Image
-                className="min-w-full h-40"
-                src="/home/process-bg.png"
-                alt=""
-                width={600}
-                height={10}
-              />
-              <div className="absolute top-3 left-5 py-4 px-8">
+            <div className="relative">
+              <div
+                className={`${styles.innerCurve} absolute top-0 left-0 z-0 h-full`}
+              ></div>
+              <div className="relative w-full min-h-[150px] h-auto bg-[#303030] p-4 ml-8 rounded-4xl z-10">
+                {/* <div className=""> */}
                 <h3 className="text-xl font-['anton'] mb-2 tracking-wider">
                   {step.title}
                 </h3>
                 <p className="text-secondary-foreground">{step.desc}</p>
               </div>
+              {/* </div> */}
             </div>
             {/* {(index === 0 || index === 4) && (
               <motion.div

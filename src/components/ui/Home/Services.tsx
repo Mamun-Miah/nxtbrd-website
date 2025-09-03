@@ -1,7 +1,19 @@
+"use client";
 import SectionTitleSm from "@/components/share/SectionTitleSm";
 import ServiceCard from "@/components/share/ServiceCard";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
+
+import { GrPrevious } from "react-icons/gr";
+import { GrNext } from "react-icons/gr";
 
 const services = [
   {
@@ -70,6 +82,9 @@ const services = [
   },
 ];
 const Services = () => {
+  const prevRef = useRef<HTMLButtonElement>(null);
+  const nextRef = useRef<HTMLButtonElement>(null);
+
   return (
     <div className="lg:w-[80%] w-[90%] mx-auto py-10">
       <SectionTitleSm title="Our Service" />
@@ -85,7 +100,7 @@ const Services = () => {
         />{" "}
         <span className="text-primary">for you</span>
       </h3>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 bg-[#222222] mt-8 p-10 rounded-xl">
+      <div className="md:grid hidden lg:grid-cols-3 md:grid-cols-2 gap-10 bg-[#222222] mt-8 p-10 rounded-xl">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
@@ -100,6 +115,52 @@ const Services = () => {
           </p>
           <button className="btn-primary mt-5 w-full">
             Need Appointment For More Plan
+          </button>
+        </div>
+      </div>
+
+      <div className="relative md:hidden block mt-10">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          navigation={{ prevEl: ".custom-prev", nextEl: ".custom-next" }}
+          modules={[Navigation]}
+          className="mySwiper"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+          }}
+        >
+          {services.map((service, i) => (
+            <SwiperSlide key={i}>
+              <ServiceCard key={service.id} service={service} />
+            </SwiperSlide>
+          ))}
+
+          {/* Custom buttons */}
+        </Swiper>
+        <div className="flex justify-between">
+          <button
+            ref={prevRef}
+            className="custom-prev absolute -left-6 top-1/2 -translate-y-1/2 text-white w-[30px] h-[30px] rounded-full border border-[#DFDFDF] z-100 cursor-pointer flex items-center justify-center transition-all duration-3 hover:bg-secondary"
+          >
+            <GrPrevious />
+          </button>
+          <button
+            ref={nextRef}
+            className="custom-next absolute -right-6 top-1/2 -translate-y-1/2 text-white w-[30px] h-[30px] rounded-full border border-[#DFDFDF] z-10 cursor-pointer flex items-center justify-center transition-all duration-3 hover:bg-secondary"
+          >
+            <GrNext />
           </button>
         </div>
       </div>

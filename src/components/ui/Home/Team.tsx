@@ -29,7 +29,8 @@ const Team = () => {
   const next = () => setActive((i) => (i + 1) % n);
 
   // card width + spacing
-  const offset = 400;
+  const offset =
+    typeof window !== "undefined" && window.innerWidth < 768 ? 250 : 400;
 
   const styleFor = (i: number): React.CSSProperties => {
     const diff = (i - active + n) % n;
@@ -92,7 +93,13 @@ const Team = () => {
                 style={{ ...styles }}
                 className="absolute transition-all duration-500 ease-in-out rounded-3xl overflow-hidden"
               >
-                <Image src={m.img} alt={m.img} width={320} height={300} />
+                <Image
+                  src={m.img}
+                  alt={m.img}
+                  width={320}
+                  height={300}
+                  sizes="50vw"
+                />
                 {isActive && (
                   <div className="w-[260px] bg-[#373737] text-center py-3 z-100 relative top-[-45px] left-[18px] rounded-lg">
                     <h3 className="text-lg text-white font-extralight font-['anton'] uppercase tracking-wider">
@@ -107,18 +114,20 @@ const Team = () => {
         </div>
 
         {/* Controls */}
-        <button
-          onClick={prev}
-          className="w-[50px] h-[50px] text-xl flex items-center justify-center bg-[#303030] absolute left-[240px] top-[60%] -translate-y-1/2 rounded-full  p-3 text-gray-100 hover:bg-black/80 cursor-pointer"
-        >
-          <FaChevronLeft />
-        </button>
-        <button
-          onClick={next}
-          className="w-[50px] h-[50px] text-xl flex items-center justify-center bg-[#303030] absolute right-[240px] top-[60%] -translate-y-1/2 rounded-full p-3 text-gray-100 hover:bg-black/80 cursor-pointer"
-        >
-          <FaChevronRight />
-        </button>
+        <div className="flex items-center">
+          <button
+            onClick={prev}
+            className="w-[50px] h-[50px] text-xl flex items-center justify-center bg-[#303030] absolute lg:left-[240px] md:left-[20%]  top-[60%] -translate-y-1/2 rounded-full  p-3 text-gray-100 hover:bg-black/80 cursor-pointer"
+          >
+            <FaChevronLeft />
+          </button>
+          <button
+            onClick={next}
+            className="w-[50px] h-[50px] text-xl flex items-center justify-center bg-[#303030] absolute lg:right-[240px] md:right-[20%]  top-[60%] -translate-y-1/2 rounded-full p-3 text-gray-100 hover:bg-black/80 cursor-pointer"
+          >
+            <FaChevronRight />
+          </button>
+        </div>
       </div>
     </div>
   );

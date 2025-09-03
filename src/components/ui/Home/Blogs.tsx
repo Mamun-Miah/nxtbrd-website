@@ -40,7 +40,7 @@ const Blogs = () => {
   const nextRef = useRef<HTMLButtonElement>(null);
   return (
     <div className="w-[80%] mx-auto py-10">
-      <h1 className="mb-8 text-secondary [-webkit-text-stroke:1.5px_#FFD300] text-8xl font-['anton'] tracking-widest">
+      <h1 className="mb-8 text-secondary [-webkit-text-stroke:1.5px_#FFD300] lg:text-8xl md:text-7xl text-4xl font-['anton'] tracking-widest">
         OUR LATEST BLOG
       </h1>
       <div className="relative">
