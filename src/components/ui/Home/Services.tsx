@@ -139,7 +139,7 @@ const Services = () => {
       </motion.div>
 
       {/* for large devices */}
-      <div className="md:grid hidden lg:grid-cols-3 md:grid-cols-2 gap-10 bg-[#222222] mt-8 p-10 rounded-xl">
+      <div className="md:grid hidden lg:grid-cols-3 md:grid-cols-2 gap-10 bg-[#222222] mt-8 p-10 rounded-xl overflow-hidden">
         <motion.div
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

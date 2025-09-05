@@ -38,7 +38,7 @@ const steps = [
 ];
 export default function WorkProcess() {
   return (
-    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
+    <div className="lg:w-[70%] w-[90%] mx-auto py-10">
       <SectionTitleSm title="Work process" />
       <h3 className="text-3xl font-['anton']">
         Our streamlined 6 step
@@ -53,9 +53,9 @@ export default function WorkProcess() {
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            initial={{ opacity: 0, x: -250 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.5 }}
             viewport={{ once: true, amount: 0.3 }}
             className="relative flex items-center w-full gap-1"
           >
@@ -68,15 +68,61 @@ export default function WorkProcess() {
                 height={40}
               />
             </div>
-            <div className="relative">
+            <div className="relative workProcess">
               <div
                 className={`${styles.innerCurve} absolute top-0 left-0 z-0 h-full`}
               ></div>
-              <div className="relative w-full min-h-[165px] h-auto bg-[#303030] p-4 ml-8 rounded-4xl z-10">
+              <div className="relative w-full min-h-[155px] h-auto bg-[#303030] p-4 ml-8 rounded-4xl z-10">
                 <h3 className="text-xl font-['anton'] mb-2 tracking-wider">
                   {step.title}
                 </h3>
                 <p className="text-secondary-foreground">{step.desc}</p>
+
+                {index === 0 && (
+                  <Image
+                    src="/icons/home/arrow-right.svg"
+                    alt="Extra"
+                    width={60}
+                    height={60}
+                    className="absolute -right-[45px] top-1/2 -z-10 w-[50px]"
+                  />
+                )}
+                {index === 1 && (
+                  <Image
+                    src="/icons/home/curved-arrow-right.svg"
+                    alt="Extra"
+                    width={60}
+                    height={60}
+                    className="absolute top-[32%] -right-[139px] w-[210px]"
+                  />
+                )}
+                {index === 3 && (
+                  <Image
+                    src="/icons/home/arrow-left.svg"
+                    alt="Extra"
+                    width={60}
+                    height={60}
+                    className="absolute -left-[150px] top-1/2 -z-10 w-[50px]"
+                  />
+                )}
+                {index === 4 && (
+                  <Image
+                    src="/icons/home/arrow-right.svg"
+                    alt="Extra"
+                    width={60}
+                    height={60}
+                    className="absolute -right-[45px] top-1/2 -z-10 w-[50px]"
+                  />
+                )}
+                {index === 2 && (
+                  <Image
+                    src="/icons/home/curved-arrow-left.svg"
+                    alt="Extra"
+                    width={60}
+                    height={60}
+                    className="absolute -left-[178px] top-[78px] w-[75px]"
+                  />
+                )}
               </div>
             </div>
           </motion.div>

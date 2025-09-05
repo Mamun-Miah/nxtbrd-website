@@ -27,7 +27,7 @@ const Header = () => {
         ${
           scrolled
             ? "bg-black/40 backdrop-blur-sm shadow-lg"
-            : "bg-transparent backdrop-blur-0 opacity-95"
+            : "bg-transparent backdrop-blur-0"
         }`}
       >
         <div className="icon">
@@ -40,7 +40,7 @@ const Header = () => {
           ></Image>
         </div>
         <div className="flex items-center gap-8">
-          <ul className="lg:flex hidden items-center gap-10 font-['anton'] text-sm tracking-wider text-gray-200">
+          <ul className="md:flex hidden items-center gap-10 font-['anton'] text-sm tracking-wider text-gray-200">
             <li>
               <Link href="/">Home</Link>
             </li>

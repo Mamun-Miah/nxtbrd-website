@@ -7,7 +7,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 
 const Banner = () => {
   return (
-    <div className="h-screen lg:w-[80%] w-[90%] mx-auto py-10 flex items-center justify-center">
+    <div className="h-screen lg:w-[70%] md:w-[80%] w-[90%] mx-auto py-10 flex items-center justify-center">
       <div className="flex md:flex-row flex-col items-center justify-between gap-16">
         {/* left side */}
 
@@ -68,6 +68,7 @@ const Banner = () => {
             </button>
           </div>
         </motion.div>
+
         {/* right side */}
         <motion.div
           initial={{ x: 400, opacity: 0 }}

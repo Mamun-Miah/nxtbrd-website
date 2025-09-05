@@ -6,7 +6,7 @@ const Contact = () => {
     <div className="w-[80%] mx-auto py-10">
       <div className="grid md:grid-cols-2 grid-cols-1 gap-10  ">
         <motion.div
-          initial={{ y: 150, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -19,7 +19,7 @@ const Contact = () => {
           </h1>
         </motion.div>
         <motion.div
-          initial={{ x: -450, opacity: 0 }}
+          initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
