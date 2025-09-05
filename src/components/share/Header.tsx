@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RiMenu3Line } from "react-icons/ri";
 import { motion, useScroll } from "motion/react";
@@ -9,9 +9,27 @@ import { motion, useScroll } from "motion/react";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollYProgress } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // add background when user scrolls
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-100 lg:px-[90px] flex items-center px-[42px] justify-between bg-[#0a0a0a81] text-[#FFFFFF] py-5 backdrop-blur-xs">
+      <nav
+        className={`z-50 fixed top-0 left-0 right-0 flex items-center justify-between px-[42px] lg:px-[90px] py-5 text-white
+        transition-all duration-500 ease-in-out
+        ${
+          scrolled
+            ? "bg-black/40 backdrop-blur-sm shadow-lg"
+            : "bg-transparent backdrop-blur-0 opacity-95"
+        }`}
+      >
         <div className="icon">
           <Image
             className="lg:w-[238px] w-[160px]"

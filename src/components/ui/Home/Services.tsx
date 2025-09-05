@@ -1,7 +1,7 @@
 "use client";
 // import required modules
 import SectionTitleSm from "@/components/share/SectionTitleSm";
-import ServiceCard from "@/components/share/ServiceCard";
+// import ServiceCard from "@/components/share/ServiceCard";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,7 +17,7 @@ import "swiper/css/navigation";
 
 // types
 export type Origin = "left" | "right" | "bottom" | "top";
-import type { Variants } from "framer-motion";
+// import type { Variants } from "framer-motion";
 
 export interface Service {
   id: number;
@@ -141,10 +141,10 @@ const Services = () => {
       {/* for large devices */}
       <div className="md:grid hidden lg:grid-cols-3 md:grid-cols-2 gap-10 bg-[#222222] mt-8 p-10 rounded-xl">
         <motion.div
-          initial={{ y: 200, opacity: 0 }}
+          initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.4, ease: "easeIn" }}
+          transition={{ duration: 0.5, ease: "easeIn" }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
