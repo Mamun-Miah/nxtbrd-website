@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const Banner = () => {
@@ -8,7 +10,13 @@ const Banner = () => {
     <div className="h-screen lg:w-[80%] w-[90%] mx-auto py-10 flex items-center justify-center">
       <div className="flex md:flex-row flex-col items-center justify-between gap-16">
         {/* left side */}
-        <div className="md:w-1/2">
+
+        <motion.div
+          initial={{ x: -400, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+          className="md:w-1/2"
+        >
           <div className="z-100">
             <h1 className="lg:text-7xl md:text-5xl text-4xl font-['Anton'] text-primary  leading-tight tracking-wider">
               WE BUILD{" "}
@@ -59,10 +67,14 @@ const Banner = () => {
               Get a Free Consultation
             </button>
           </div>
-        </div>
-
+        </motion.div>
         {/* right side */}
-        <div className="md:w-1/2 md:pl-0 pl-10">
+        <motion.div
+          initial={{ x: 400, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+          className="md:w-1/2 md:pl-0 pl-10"
+        >
           <div className="relative">
             <div className="absolute bottom-[85%] right-[87%]">
               <h3 className="text-2xl text-primary font-['anton'] font-bold tracking-wider">
@@ -82,7 +94,7 @@ const Banner = () => {
             />
 
             {/* ratings */}
-            <div className="absolute md:bottom-[-8px] bottom-[-35px] md:left-[-40px] left-[-70px] bg-[#222222] p-3 w-54 rounded-lg md:scale-100 scale-75">
+            <div className="absolute md:bottom-[-40px] bottom-[-35px] md:left-[-40px] left-[-70px] bg-[#222222] p-3 w-54 rounded-lg md:scale-100 scale-75">
               <div className="flex gap-3">
                 <p className="text-[#F1F1F1] text-xs">Rating 5.0</p>
                 <span className="flex gap-1">
@@ -205,7 +217,7 @@ const Banner = () => {
           <button className="block md:hidden text-sm mt-10 py-3 px-12 rounded-lg font-['Anton'] tracking-wider transition-all duration-200 bg-primary hover:bg-primary-foreground text-black cursor-pointer w-full">
             Get a Free Consultation
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

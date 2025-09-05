@@ -1,9 +1,8 @@
-/* HTML: <div class="inner-curve"></div> */
 .innerCurve {
-  --r: 20px; /* control the rounded part */
-  --s: 40px; /* control the size of the cut */
-  --a: 40deg; /* control the depth of the curvature */
-  --p: 50%; /* control the position */
+  --r: 20px;
+  --s: 40px;
+  --a: 40deg;
+  --p: 50%;
 
   width: 100px;
   aspect-ratio: 2/3;
@@ -26,31 +25,4 @@
       #0000 0 calc(var(--p) + var(--_d)),
       #000 0
     );
-}
-
-@keyframes gradient-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gradient-move {
-  animation: gradient-move 8s ease infinite;
-}
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

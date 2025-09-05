@@ -1,9 +1,25 @@
 import Image from "next/image";
 import React from "react";
-
-const ServiceCard = ({ service }) => {
+import { motion, Variants } from "framer-motion";
+import { Service } from "../ui/Home/Services";
+const ServiceCard = ({
+  service,
+  delay,
+  variant,
+}: {
+  service: Service;
+  delay: number;
+  variant: Variants;
+}) => {
   return (
-    <div className="relative bg-[#222222] md:p-0 p-5 rounded-lg">
+    <motion.div
+      variants={variant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, delay, ease: "easeIn" }}
+      className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
+    >
       <Image
         className="absolute md:top-0 top-3 md:left-1 left-2 w-[20%]"
         width={40}
@@ -22,7 +38,7 @@ const ServiceCard = ({ service }) => {
 
       <h3 className="pt-4 pb-2 font-[anton] font-[100]">{service.title}</h3>
       <p className="text-secondary-foreground text-sm">{service.description}</p>
-    </div>
+    </motion.div>
   );
 };
 

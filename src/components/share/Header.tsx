@@ -39,7 +39,10 @@ const Header = () => {
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
-          <button onClick={() => setIsOpen(true)} className="text-2xl">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="text-2xl md:hidden"
+          >
             <RiMenu3Line />
           </button>
         </div>

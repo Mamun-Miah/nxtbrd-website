@@ -112,6 +112,12 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* for swiper */
+.swiper,
+.swiper-slide {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

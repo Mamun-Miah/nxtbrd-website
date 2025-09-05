@@ -14,7 +14,7 @@ const Footer = () => {
               height={54}
               alt="logo"
             />
-            <p className="text-[#E8E8E8]  my-5">
+            <p className="text-secondary-foreground  my-5">
               By crafting impactful digital experiences through strategy,
               creativity, and innovation that connect with audiences and drive
               long-term success.
@@ -73,7 +73,7 @@ const Footer = () => {
             <ul className="mt-6 flex flex-col gap-4">
               <li>
                 <Link
-                  className="flex items-center gap-2 text-[#E8E8E8]"
+                  className="flex items-center gap-2 text-secondary-foreground"
                   href="/"
                 >
                   <Image
@@ -87,7 +87,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="flex items-center gap-2 text-[#E8E8E8]"
+                  className="flex items-center gap-2 text-secondary-foreground"
                   href="/services"
                 >
                   <Image
@@ -101,7 +101,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="flex items-center gap-2 text-[#E8E8E8]"
+                  className="flex items-center gap-2 text-secondary-foreground"
                   href="/about"
                 >
                   <Image
@@ -115,7 +115,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="flex items-center gap-2 text-[#E8E8E8]"
+                  className="flex items-center gap-2 text-secondary-foreground"
                   href="/team"
                 >
                   <Image
@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="flex items-center gap-2 text-[#E8E8E8]"
+                  className="flex items-center gap-2 text-secondary-foreground"
                   href="/team"
                 >
                   <Image
@@ -160,7 +160,7 @@ const Footer = () => {
                   />{" "}
                   Address
                 </span>
-                <span className="text-[#E8E8E8]">
+                <span className="text-secondary-foreground">
                   38(3rd floor), Shah Makhdum Avenue, Sector 13, Uttara,
                   Dhaka-1230
                 </span>
@@ -176,7 +176,9 @@ const Footer = () => {
                   />{" "}
                   Phone
                 </span>
-                <span className="text-[#E8E8E8]">+8801922557436</span>
+                <span className="text-secondary-foreground">
+                  +8801922557436
+                </span>
               </li>
               <li>
                 <span className="flex items-center gap-2 ">
@@ -188,7 +190,9 @@ const Footer = () => {
                   />{" "}
                   Email
                 </span>
-                <span className="text-[#E8E8E8]">info@mapleitfirm.com</span>
+                <span className="text-secondary-foreground">
+                  info@mapleitfirm.com
+                </span>
               </li>
             </ul>
           </div>
@@ -208,7 +212,9 @@ const Footer = () => {
                   />{" "}
                   Monday - Saturday
                 </span>
-                <span className="text-[#E8E8E8]">9:00 AM - 5:00 PM</span>
+                <span className="text-secondary-foreground">
+                  9:00 AM - 5:00 PM
+                </span>
               </li>
 
               <li>
@@ -221,7 +227,9 @@ const Footer = () => {
                   />{" "}
                   Online Service
                 </span>
-                <span className="text-[#E8E8E8]">24 Hours 7 Days</span>
+                <span className="text-secondary-foreground">
+                  24 Hours 7 Days
+                </span>
               </li>
               <li>
                 <span className="flex items-center gap-2 ">
@@ -233,7 +241,7 @@ const Footer = () => {
                   />{" "}
                   Sunday
                 </span>
-                <span className="text-[#E8E8E8]">CLOSED</span>
+                <span className="text-secondary-foreground">CLOSED</span>
               </li>
             </ul>
           </div>

@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import SectionTitleSm from "@/components/share/SectionTitleSm";
 import useEmblaCarousel from "embla-carousel-react";
+import styles from "./Home.module.css";
 
 const items = [
   {
@@ -81,7 +82,7 @@ const Testimonials = () => {
           {items.map((item, index) => (
             <CarouselItem
               key={index}
-              className="pl-5 md:basis-1/2 lg:basis-1/3"
+              className="pl-5 md:basis-1/2 lg:basis-1/3 pt-10"
             >
               <div
                 className={`relative bg-[url('/home/review-bg.png')] bg-center bg-contain bg-no-repeat h-[300px] ${
@@ -106,6 +107,25 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
+              {/* <div className={styles.innerCurveReview}>
+                <div className="pt-5 w-[300px] p-1">
+                  <Image
+                    className="mx-auto rounded-lg"
+                    src={item.image}
+                    alt=""
+                    width={65}
+                    height={65}
+                  />
+                  <div className="pt-5 text-center px-3">
+                    <h3 className="text-xl font-['anton'] font-light">
+                      {item.name}
+                    </h3>
+                    <p className="text-xs text-secondary-foreground">
+                      {item.review}
+                    </p>
+                  </div>
+                </div>
+              </div> */}
             </CarouselItem>
           ))}
         </CarouselContent>

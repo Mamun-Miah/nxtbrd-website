@@ -12,7 +12,7 @@ import Image from "next/image";
 
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
-
+import { motion } from "framer-motion";
 const blogs = [
   {
     img: "/home/blog1.png",
@@ -40,9 +40,15 @@ const Blogs = () => {
   const nextRef = useRef<HTMLButtonElement>(null);
   return (
     <div className="w-[80%] mx-auto py-10">
-      <h1 className="mb-8 text-secondary [-webkit-text-stroke:1.5px_#FFD300] lg:text-8xl md:text-7xl text-4xl font-['anton'] tracking-widest">
+      <motion.h1
+        initial={{ x: -250, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="mb-8 text-secondary [-webkit-text-stroke:1.5px_#FFD300] lg:text-8xl md:text-7xl text-4xl font-['anton'] tracking-widest"
+      >
         OUR LATEST BLOG
-      </h1>
+      </motion.h1>
       <div className="relative">
         <Swiper
           slidesPerView={3}

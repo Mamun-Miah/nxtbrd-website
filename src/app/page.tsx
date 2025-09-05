@@ -19,15 +19,18 @@ const Home = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Sections */}
-      <Banner />
-      <About />
-      <Services />
-      <Team />
-      <Testimonials />
-      <Sponsored />
-      <Blogs />
-      <WorkProcess />
-      <Contact />
+
+      <div className="relative z-10">
+        <Banner />
+        <About />
+        <Services />
+        <Team />
+        <Testimonials />
+        <Sponsored />
+        <Blogs />
+        <WorkProcess />
+        <Contact />
+      </div>
 
       {/* Background Effects */}
       {/* left side */}

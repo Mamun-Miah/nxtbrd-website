@@ -57,7 +57,7 @@ export default function WorkProcess() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="relative flex items-center w-full"
+            className="relative flex items-center w-full gap-1"
           >
             <div className=" bg-[#303030] rounded-full min-w-[80px] h-[80px] flex items-center justify-center mr-[-10px] z-10">
               <Image
@@ -72,26 +72,13 @@ export default function WorkProcess() {
               <div
                 className={`${styles.innerCurve} absolute top-0 left-0 z-0 h-full`}
               ></div>
-              <div className="relative w-full min-h-[150px] h-auto bg-[#303030] p-4 ml-8 rounded-4xl z-10">
-                {/* <div className=""> */}
+              <div className="relative w-full min-h-[165px] h-auto bg-[#303030] p-4 ml-8 rounded-4xl z-10">
                 <h3 className="text-xl font-['anton'] mb-2 tracking-wider">
                   {step.title}
                 </h3>
                 <p className="text-secondary-foreground">{step.desc}</p>
               </div>
-              {/* </div> */}
             </div>
-            {/* {(index === 0 || index === 4) && (
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: "100px" }}
-                transition={{ duration: 0.6, delay: index * 0.3 }}
-                viewport={{ once: true }}
-                className="absolute h-[1px] top-1/2 -right-[60px] w-[100px] -z-20 border-b border-dashed border-primary"
-              >
-                <BiSolidRightArrow />
-              </motion.div>
-            )} */}
           </motion.div>
         ))}
       </div>
