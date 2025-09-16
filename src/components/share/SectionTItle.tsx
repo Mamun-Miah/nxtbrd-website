@@ -1,6 +1,14 @@
 import React from "react";
 
-const SectionTitle = ({ heading, headingSpan, paragraph }) => {
+const SectionTitle = ({
+  heading,
+  headingSpan,
+  paragraph,
+}: {
+  heading: string;
+  headingSpan: string;
+  paragraph: string;
+}) => {
   return (
     <div className="md:w-[70%] w-full mx-auto text-center pb-5">
       <h2 className="text-3xl font-['anton']">

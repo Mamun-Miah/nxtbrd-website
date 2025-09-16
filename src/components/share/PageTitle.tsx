@@ -1,6 +1,14 @@
 import React from "react";
 
-const PageTitle = ({ bg, pageName, pageTitle }) => {
+const PageTitle = ({
+  bg,
+  pageName,
+  pageTitle,
+}: {
+  bg: string;
+  pageName: string;
+  pageTitle: string;
+}) => {
   return (
     <div
       style={{ backgroundImage: `url('${bg}')` }}

@@ -116,12 +116,12 @@ const Services = () => {
   const nextRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
+    <div className="relative lg:w-[70%] w-[90%] mx-auto py-10">
       <motion.div
         initial={{ x: -150, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.8, ease: "easeIn" }}
+        transition={{ type: "spring", stiffness: 60, damping: 15 }}
       >
         <SectionTitleSm title="Our Service" />
         <h3 className="text-3xl font-['anton']">
@@ -144,7 +144,7 @@ const Services = () => {
           initial={{ y: 150, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, ease: "easeIn" }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -173,7 +173,7 @@ const Services = () => {
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn" }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -204,7 +204,7 @@ const Services = () => {
           initial={{ x: 150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn" }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -233,7 +233,12 @@ const Services = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn" }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 15,
+            delay: 0.1,
+          }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -264,7 +269,12 @@ const Services = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn", delay: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 15,
+            delay: 0.2,
+          }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -295,7 +305,12 @@ const Services = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn", delay: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 15,
+            delay: 0.3,
+          }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -326,7 +341,7 @@ const Services = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn", delay: 0.2 }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -357,7 +372,7 @@ const Services = () => {
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8, ease: "easeIn", delay: 0.3 }}
+          transition={{ type: "spring", stiffness: 60, damping: 15 }}
           className="relative bg-[#222222] md:p-0 p-5 rounded-lg"
         >
           <Image
@@ -467,6 +482,35 @@ const Services = () => {
           </button>
         </div>
       </div>
+
+      <motion.div
+        animate={{
+          rotate: -360,
+          scale: [1, 1.4, 1],
+        }}
+        transition={{
+          rotate: {
+            repeat: Infinity,
+            duration: 6,
+            ease: "linear",
+          },
+          scale: {
+            repeat: Infinity,
+            duration: 6,
+            ease: "easeIn",
+          },
+        }}
+        className="absolute -right-30 top-0"
+      >
+        <Image
+          className=""
+          src="/home/elements/donut.svg"
+          width={150}
+          height={200}
+          quality={100}
+          alt=""
+        />
+      </motion.div>
     </div>
   );
 };

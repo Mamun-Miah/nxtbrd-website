@@ -27,7 +27,6 @@ const images = [
 
 export default function Sponsored() {
   const baseX = useMotionValue(0);
-
   // Track scroll velocity
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -39,6 +38,7 @@ export default function Sponsored() {
     clamp: false,
   });
 
+  console.log(velocityFactor);
   const direction = useRef(1);
   const baseSpeed = 100; // autoplay base speed (px/sec)
 

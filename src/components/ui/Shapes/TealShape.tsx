@@ -1,7 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ShapeStyles } from "@/app/page";
 import React from "react";
 
-const TealShape = ({ styles }: { styles: any }) => {
+const TealShape = ({ styles }: { styles: ShapeStyles }) => {
   return (
     <div
       style={styles}

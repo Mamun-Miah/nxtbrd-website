@@ -1,6 +1,7 @@
+import { ShapeStyles } from "@/app/page";
 import React from "react";
 
-const TealTransparent = ({ styles }) => {
+const TealTransparent = ({ styles }: { styles: ShapeStyles }) => {
   return (
     <div
       style={styles}

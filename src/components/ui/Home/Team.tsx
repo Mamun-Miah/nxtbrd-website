@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SectionTitle from "@/components/share/SectionTItle";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-
+import { motion } from "framer-motion";
 const teamMembers = [
   {
     name: "Sahed Mahmud",
@@ -75,12 +75,25 @@ const Team = () => {
   };
 
   return (
-    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
-      <SectionTitle
-        heading="Meet Our"
-        headingSpan="Team"
-        paragraph="A creative, skilled, and passionate team delivering tailored digital marketing solutions to help brands grow, connect, and succeed online."
-      />
+    <div className="relative lg:w-[70%] w-[90%] mx-auto py-10">
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.05,
+          type: "spring",
+          stiffness: 100,
+          damping: 12,
+        }}
+      >
+        {" "}
+        <SectionTitle
+          heading="Meet Our"
+          headingSpan="Team"
+          paragraph="A creative, skilled, and passionate team delivering tailored digital marketing solutions to help brands grow, connect, and succeed online."
+        />
+      </motion.div>
+
       <div className="relative mx-auto w-full">
         <div className="relative mx-auto flex items-center justify-center gap-10 h-[500px] overflow-hidden">
           {teamMembers.map((m, i) => {
@@ -129,6 +142,36 @@ const Team = () => {
           </button>
         </div>
       </div>
+
+      {/* animated element */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{
+          repeat: Infinity,
+          duration: 4,
+          ease: "linear",
+        }}
+        className="absolute -left-40 top-30"
+      >
+        <Image
+          className=""
+          src="/home/elements/star.svg"
+          width={200}
+          height={200}
+          quality={100}
+          alt=""
+        />
+      </motion.div>
+      <motion.div className="absolute -right-40 top-20">
+        <Image
+          className=""
+          src="/home/elements/spring.svg"
+          width={200}
+          height={200}
+          quality={100}
+          alt=""
+        />
+      </motion.div>
     </div>
   );
 };

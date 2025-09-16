@@ -39,7 +39,7 @@ const Blogs = () => {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
   return (
-    <div className="w-[80%] mx-auto py-10">
+    <div className="md:w-[70%] w-[90%] mx-auto py-10">
       <motion.h1
         initial={{ x: -250, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}

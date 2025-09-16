@@ -1,6 +1,7 @@
+import { ShapeStyles } from "@/app/page";
 import React from "react";
 
-const YellowShapeSm = ({ styles }) => {
+const YellowShapeSm = ({ styles }: { styles: ShapeStyles }) => {
   return (
     <div
       style={styles}

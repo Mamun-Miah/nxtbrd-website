@@ -6,10 +6,10 @@ import React from "react";
 import { motion } from "motion/react";
 const About = () => {
   return (
-    <div className="lg:w-[80%] w-[90%] mx-auto py-10">
+    <div className="lg:w-[70%] w-[90%] mx-auto py-10">
       <motion.div
         initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }} 
+        whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex md:flex-row flex-col-reverse items-center md:gap-20 gap-10"
@@ -18,10 +18,10 @@ const About = () => {
           <div className="hidden md:block">
             <SectionTitleSm title="Who we are" />
           </div>
-          <Image src="/home/ring.png" width={220} height={200} alt="" />{" "}
-          <span className="md:block hidden absolute top-[15%] left-[85%] w-[1px] h-54 bg-secondary"></span>
+          <Image src="/home/ring.png" width={220} height={220} alt="" />{" "}
+          <span className="md:block hidden absolute top-[15%] left-[85%] w-[1px] h-54 bg-gray-700"></span>
         </div>
-        <div className="md:w-6/12">
+        <div className="md:w-8/12">
           <div className="md:hidden  block pb-5">
             <SectionTitleSm title="Who we are" />
           </div>
