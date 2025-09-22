@@ -8,8 +8,8 @@ import { AiOutlinePlus } from "react-icons/ai";
 const Hero = () => {
   const [childStart, setChildStart] = useState(false);
   return (
-    <div className="relative md:w-[90%] w-[90%] min-h-screen mx-auto md:py-10 py-3 flex items-center justify-center gap-20">
-      <div className="flex md:flex-row flex-col items-center justify-between">
+    <div className="relative md:w-[90%] w-[90%] min-h-screen mx-auto md:py-10 py-3 flex items-center justify-center">
+      <div className="flex md:flex-row flex-col items-center justify-between w-full">
         {/* left side */}
 
         <motion.div
@@ -21,7 +21,7 @@ const Hero = () => {
             damping: 6,
           }}
           onAnimationComplete={() => setChildStart(true)}
-          className="md:w-1/2 flex items-center"
+          className="w-full flex items-center 2xl-gap-30"
         >
           {/* animated ball */}
           <div>
@@ -44,26 +44,26 @@ const Hero = () => {
               />
             </motion.div>
           </div>
-          <div className="z-100 md:ml-30 xl:min-w-[436px] lg:min-w-[400px]">
-            <h1 className="xl:text-7xl lg:text-6xl text-4xl font-['Anton'] text-primary  leading-tight tracking-wider">
+          <div className="z-100 md:ml-30 2xl:w-[615px] xl:w-[446px] lg:w-[400px] lg:min-w-[400px]">
+            <h1 className="2xl:text-8xl xl:text-7xl  lg:text-6xl text-4xl font-['Anton'] text-primary  leading-tight tracking-wider">
               WE BUILD
               <span className="ml-2 inline-flex items-center">
                 <Image
                   src="/icons/home/brand-person1.svg"
-                  className="lg:w-16 md:w-10 w-8"
+                  className="ml-2 2xl:w-20 lg:w-16 md:w-10 w-8"
                   width={50}
                   height={50}
                   alt="brand person1"
                 />
                 <Image
-                  className="md:ml-[-20px] -ml-3 lg:w-16 md:w-10 w-8"
+                  className="md:ml-[-20px] -ml-3 2xl:w-20 lg:w-16 md:w-10 w-8"
                   src="/icons/home/brand-person2.svg"
                   width={50}
                   height={50}
                   alt="brand person1"
                 />
                 <Image
-                  className="md:ml-[-20px] -ml-3 lg:w-16 md:w-10 w-8"
+                  className="md:ml-[-20px] -ml-3 2xl:w-20 lg:w-16 md:w-10 w-8"
                   src="/icons/home/brand-person3.svg"
                   width={50}
                   height={50}
@@ -128,7 +128,7 @@ const Hero = () => {
             stiffness: 10,
             damping: 6,
           }}
-          className="md:w-1/2 md:pl-10 lg:h-[500px]"
+          className="w-full"
         >
           <div className="relative">
             {childStart && (
