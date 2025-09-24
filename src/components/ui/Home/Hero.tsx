@@ -8,8 +8,26 @@ import { AiOutlinePlus } from "react-icons/ai";
 const Hero = () => {
   const [childStart, setChildStart] = useState(false);
   return (
-    <div className="relative md:w-[90%] w-[90%] min-h-screen mx-auto md:py-10 py-3 flex items-center justify-center">
-      <div className="flex md:flex-row flex-col items-center justify-between w-full">
+    <div className="relative md:w-[90%] w-[90%] min-h-screen mx-auto flex items-center justify-center">
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{
+          repeat: Infinity,
+          duration: 7,
+          ease: "linear",
+        }}
+        className="hidden md:block absolute -left-20 bottom-15"
+      >
+        <Image
+          src="/home/elements/marbel.svg"
+          width={200}
+          height={200}
+          quality={100}
+          alt=""
+        />
+      </motion.div>
+      {/* Hero content */}
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-20 justify-between items-start w-full">
         {/* left side */}
 
         <motion.div
@@ -21,30 +39,9 @@ const Hero = () => {
             damping: 6,
           }}
           onAnimationComplete={() => setChildStart(true)}
-          className="w-full flex items-center 2xl-gap-30"
+          // className="w-full flex items-center 2xl-gap-30"
         >
-          {/* animated ball */}
-          <div>
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{
-                repeat: Infinity,
-                duration: 7,
-                ease: "linear",
-              }}
-              className="hidden md:block absolute -left-20 bottom-15"
-            >
-              <Image
-                className=""
-                src="/home/elements/marbel.svg"
-                width={200}
-                height={200}
-                quality={100}
-                alt=""
-              />
-            </motion.div>
-          </div>
-          <div className="z-100 md:ml-30 2xl:w-[615px] xl:w-[446px] lg:w-[400px] lg:min-w-[400px]">
+          <div className="z-100 md:ml-34 2xl:w-[615px] xl:w-[446px] lg:w-[400px] lg:min-w-[400px]">
             <h1 className="2xl:text-8xl xl:text-7xl  lg:text-6xl text-4xl font-['Anton'] text-primary  leading-tight tracking-wider">
               WE BUILD
               <span className="ml-2 inline-flex items-center">
@@ -128,7 +125,7 @@ const Hero = () => {
             stiffness: 10,
             damping: 6,
           }}
-          className="w-full"
+          className="w-full p-5"
         >
           <div className="relative">
             {childStart && (

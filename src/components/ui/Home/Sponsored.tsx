@@ -1,5 +1,6 @@
 "use client";
-import { useRef } from "react";
+
+import { useRef, useEffect, useState } from "react";
 import {
   motion,
   useMotionValue,
@@ -8,6 +9,7 @@ import {
   useTransform,
   useVelocity,
   useAnimationFrame,
+  wrap,
 } from "framer-motion";
 import Image from "next/image";
 
@@ -27,7 +29,8 @@ const images = [
 
 export default function Sponsored() {
   const baseX = useMotionValue(0);
-  // Track scroll velocity
+
+  // Scroll velocity factor
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
@@ -38,18 +41,33 @@ export default function Sponsored() {
     clamp: false,
   });
 
-  console.log(velocityFactor);
   const direction = useRef(1);
-  const baseSpeed = 100; // autoplay base speed (px/sec)
+  const baseSpeed = 100;
 
-  // Infinite loop effect
+  // Dynamically measure item width
+  const [itemWidth, setItemWidth] = useState(200);
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (itemRef.current) {
+      setItemWidth(itemRef.current.offsetWidth + 48);
+    }
+  }, []);
+
+  // Wrap value so items loop seamlessly
+  const x = useTransform(
+    baseX,
+    (v) => `${wrap(-images.length * itemWidth, 0, v)}px`
+  );
+
   useAnimationFrame((t, delta) => {
     let moveBy = direction.current * baseSpeed * (delta / 1000);
 
-    // reverse direction when scrolling up/down
+    // Reverse when scrolling opposite direction
     if (velocityFactor.get() < 0) direction.current = -1;
     else if (velocityFactor.get() > 0) direction.current = 1;
 
+    // Boost speed by scroll intensity
     moveBy += direction.current * moveBy * velocityFactor.get();
 
     baseX.set(baseX.get() - moveBy);
@@ -57,16 +75,19 @@ export default function Sponsored() {
 
   return (
     <section className="overflow-hidden w-full py-10">
-      <motion.div className="flex gap-12" style={{ x: baseX }}>
-        {/* Duplicate once for seamless looping */}
-        {[...images, ...images, ...images].map((src, i) => (
-          <div key={i} className="flex-shrink-0">
+      <motion.div className="flex gap-12" style={{ x }}>
+        {[...images, ...images].map((src, i) => (
+          <div
+            key={i}
+            ref={i === 0 ? itemRef : null} // measure first item
+            className="flex-shrink-0"
+          >
             <Image
               src={src}
               alt={`sponsor-${i}`}
               width={200}
               height={80}
-              className="w-auto object-contain"
+              className="w-auto h-20 object-contain"
             />
           </div>
         ))}

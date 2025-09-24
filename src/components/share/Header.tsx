@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RiMenu3Line } from "react-icons/ri";
 import { motion, useScroll } from "motion/react";
+import { Separator } from "../ui/separator";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,7 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     // <nav className="w-[90%] mx-auto">
     <nav
@@ -30,43 +32,46 @@ const Header = () => {
             : "bg-transparent backdrop-blur-0"
         }`}
     >
-      <div className="w-[90%] mx-auto flex items-center justify-between  py-6 text-white">
-        <div className="icon">
-          <Link href="/">
-            <Image
-              className="md:w-[180px] w-[160px]"
-              src="/logo.png"
-              width={230}
-              height={44}
-              alt=""
-            ></Image>
-          </Link>
+      <div className="w-[90%] mx-auto">
+        <div className="flex items-center justify-between  py-6 text-white">
+          <div className="icon">
+            <Link href="/">
+              <Image
+                className="md:w-[180px] w-[160px]"
+                src="/logo.png"
+                width={230}
+                height={44}
+                alt=""
+              ></Image>
+            </Link>
+          </div>
+          <div className="flex items-center justify-items-end gap-8">
+            <ul className="md:flex hidden items-center gap-12 font-['anton'] text-sm tracking-wider text-gray-200">
+              <li className="text-primary">
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/services">Services</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/team">Team</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-2xl md:hidden"
+            >
+              <RiMenu3Line />
+            </button>
+          </div>
         </div>
-        <div className="flex items-center justify-items-end gap-8">
-          <ul className="md:flex hidden items-center gap-12 font-['anton'] text-sm tracking-wider text-gray-200">
-            <li className="text-primary">
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/services">Services</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <Link href="/team">Team</Link>
-            </li>
-            <li>
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-          <button
-            onClick={() => setIsOpen(true)}
-            className="text-2xl md:hidden"
-          >
-            <RiMenu3Line />
-          </button>
-        </div>
+        {!scrolled && <Separator className="bg-[#636363]" />}
       </div>
 
       {/* Nav items for mobile devices */}
@@ -190,7 +195,7 @@ const Header = () => {
         style={{
           scaleX: scrollYProgress,
           position: "absolute",
-          top: 83,
+          top: 82,
           left: 0,
           right: 0,
           height: 2,
